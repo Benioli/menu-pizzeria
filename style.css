@@ -17,18 +17,19 @@ body{
   color:white;
   padding:60px 20px;
   overflow:hidden;
+  /* 🍕 ENLACE ABIERTO Y DIRECTO DE TU FOTO DE LA PIZZA SIN BLOQUEOS 🍕 */
   background:
     linear-gradient(
-      rgba(0,0,0,.80),
-      rgba(0,0,0,.80)
+      rgba(0,0,0,.85),
+      rgba(0,0,0,.85)
     ),
-    url("https://unsplash.com");
+    url("https://ibb.co");
   background-size:cover;
   background-position:center;
-  background-attachment: fixed; /* Mantiene el fondo fijo al deslizar */
+  background-attachment: fixed;
 }
 
-/* 🌟 MEJORA: Un contenedor central que envuelve todo para darle orden */
+/* Contenedor central para dar orden visual */
 .brand, .hero, .menu-title, .menu-list, footer {
   max-width: 900px;
   margin-left: auto;
@@ -36,7 +37,7 @@ body{
 }
 
 .brand{
-  text-align: center; /* Centrado se ve más institucional en menús digitales */
+  text-align: center;
   margin-bottom:40px;
 }
 
@@ -79,7 +80,7 @@ body{
   font-size:1.1rem;
   margin-top:20px;
   border-top:1px solid rgba(255,255,255,0.3);
-  border-bottom:1px solid rgba(255,255,255,0.3); /* Doble línea sutil */
+  border-bottom:1px solid rgba(255,255,255,0.3);
   display:inline-block;
   padding: 8px 20px;
   letter-spacing: 3px;
@@ -95,22 +96,9 @@ body{
   font-family:'Cinzel',serif;
   font-size:2.5rem;
   letter-spacing: 4px;
-  position: relative;
 }
 
-/* Líneas decorativas a los lados del título del menú */
-.menu-title h2::before, .menu-title h2::after {
-  content: "";
-  display: inline-block;
-  width: 60px;
-  height: 1px;
-  background: #f2e8b5;
-  vertical-align: middle;
-  margin: 0 15px;
-  opacity: 0.5;
-}
-
-/* 🌟 MEJORA: Ahora el menú se divide en 2 columnas en pantallas grandes */
+/* Distribución moderna en dos columnas simétricas */
 .menu-list{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -118,13 +106,13 @@ body{
   margin-bottom: 40px;
 }
 
-/* 🌟 MEJORA: Tarjetas con diseño limpio y fondo oscuro translúcido */
+/* Cajas traslúcidas que hacen resaltar el texto sobre tu fondo */
 .item{
   background: rgba(255, 255, 255, 0.03);
   padding: 25px;
   border-radius: 8px;
   border: 1px solid rgba(242, 232, 181, 0.1);
-  text-align: left; /* Alineado a la izquierda facilita la lectura */
+  text-align: left;
   transition: transform 0.3s ease;
 }
 
@@ -139,14 +127,12 @@ body{
   color:#f2e8b5;
   font-size:1.4rem;
   margin-bottom:10px;
-  display: flex;
-  justify-content: space-between; /* Envía el precio al extremo derecho */
   border-bottom: 1px dashed rgba(242, 232, 181, 0.2);
   padding-bottom: 8px;
 }
 
 .item p{
-  color:#b0b0b0; /* Un gris un poco más suave para que no canse la vista */
+  color:#b0b0b0;
   font-size:0.95rem;
   line-height:1.6;
   font-weight: 300;
@@ -178,7 +164,7 @@ footer h3{
   margin:10px 0;
 }
 
-/* 📱 Ajustes automáticos para Celulares */
+/* Modificaciones para celulares */
 @media(max-width:768px){
   .hero h1{
     font-size:4rem;
@@ -190,15 +176,13 @@ footer h3{
   }
 
   .menu-list {
-    grid-template-columns: 1fr; /* Una sola columna en celulares */
+    grid-template-columns: 1fr;
     gap: 20px;
     padding: 0 10px;
   }
 
   .item h3 {
     font-size: 1.2rem;
-    flex-direction: column; /* Nombre arriba, precio abajo en pantallas muy chicas */
-    gap: 5px;
   }
 
   .contact{
